@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Chum 💗</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        background: linear-gradient(135deg, #ffb6d9, #ffc0cb, #ff99cc);
+        text-align: center;
+        color: #fff;
+    }
+
+    .container {
+        margin-top: 100px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .question {
+        font-size: 1.8em;
+        margin: 20px 0;
+    }
+
+    button {
+        background-color: white;
+        color: #ff4da6;
+        border: none;
+        padding: 12px 25px;
+        margin: 10px;
+        font-size: 1em;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #ff4da6;
+        color: white;
+        transform: scale(1.1);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .heart {
+        font-size: 50px;
+        animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Hi Chum 💕</h1>
+
+    <div id="step1">
+        <div class="question">Do you like surprises? 🎁</div>
+        <button onclick="nextStep('step2')">Yes 😍</button>
+        <button onclick="nextStep('step2')">Of course 💖</button>
+    </div>
+
+    <div id="step2" class="hidden">
+        <div class="question">Do you enjoy cute dates? 🌸</div>
+        <button onclick="nextStep('step3')">Yes 🥰</button>
+        <button onclick="nextStep('step3')">Absolutely 💕</button>
+    </div>
+
+    <div id="step3" class="hidden">
+        <div class="question">Do you think I’m a little sweet? 😳</div>
+        <button onclick="nextStep('finalStep')">Maybe 😌</button>
+        <button onclick="nextStep('finalStep')">Yes you are 💗</button>
+    </div>
+
+    <div id="finalStep" class="hidden">
+        <div class="heart">💖</div>
+        <div class="question" style="font-size:2.2em;">
+            Chum, will you be my Valentine? 💘
+        </div>
+        <button onclick="yesAnswer()">YES!!! 💍💕</button>
+        <button id="noBtn" onmouseover="moveButton()">No 🙈</button>
+    </div>
+
+    <div id="response" class="hidden">
+        <h1>YAYYYYY 💞💞💞</h1>
+        <div class="question">I can't wait for our special day together, Chum! 🌹✨</div>
+    </div>
+
+</div>
+
+<script>
+function nextStep(next) {
+    document.querySelectorAll('.container > div').forEach(div => {
+        div.classList.add('hidden');
+    });
+    document.getElementById(next).classList.remove('hidden');
+}
+
+function yesAnswer() {
+    document.getElementById('finalStep').classList.add('hidden');
+    document.getElementById('response').classList.remove('hidden');
+}
+
+function moveButton() {
+    const btn = document.getElementById('noBtn');
+    const x = Math.random() * window.innerWidth * 0.7;
+    const y = Math.random() * window.innerHeight * 0.6;
+    btn.style.position = "absolute";
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Chum 💗</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        background: linear-gradient(135deg, #ffb6d9, #ffc0cb, #ff99cc);
+        text-align: center;
+        color: #fff;
+    }
+
+    .container {
+        margin-top: 100px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .question {
+        font-size: 1.8em;
+        margin: 20px 0;
+    }
+
+    button {
+        background-color: white;
+        color: #ff4da6;
+        border: none;
+        padding: 12px 25px;
+        margin: 10px;
+        font-size: 1em;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #ff4da6;
+        color: white;
+        transform: scale(1.1);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .heart {
+        font-size: 50px;
+        animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Hi Chum 💕</h1>
+
+    <div id="step1">
+        <div class="question">Do you like surprises? 🎁</div>
+        <button onclick="nextStep('step2')">Yes 😍</button>
+        <button onclick="nextStep('step2')">Of course 💖</button>
+    </div>
+
+    <div id="step2" class="hidden">
+        <div class="question">Do you enjoy cute dates? 🌸</div>
+        <button onclick="nextStep('step3')">Yes 🥰</button>
+        <button onclick="nextStep('step3')">Absolutely 💕</button>
+    </div>
+
+    <div id="step3" class="hidden">
+        <div class="question">Do you think I’m a little sweet? 😳</div>
+        <button onclick="nextStep('finalStep')">Maybe 😌</button>
+        <button onclick="nextStep('finalStep')">Yes you are 💗</button>
+    </div>
+
+    <div id="finalStep" class="hidden">
+        <div class="heart">💖</div>
+        <div class="question" style="font-size:2.2em;">
+            Chum, will you be my Valentine? 💘
+        </div>
+        <button onclick="yesAnswer()">YES!!! 💍💕</button>
+        <button id="noBtn" onmouseover="moveButton()">No 🙈</button>
+    </div>
+
+    <div id="response" class="hidden">
+        <h1>YAYYYYY 💞💞💞</h1>
+        <div class="question">I can't wait for our special day together, Chum! 🌹✨</div>
+    </div>
+
+</div>
+
+<script>
+function nextStep(next) {
+    document.querySelectorAll('.container > div').forEach(div => {
+        div.classList.add('hidden');
+    });
+    document.getElementById(next).classList.remove('hidden');
+}
+
+function yesAnswer() {
+    document.getElementById('finalStep').classList.add('hidden');
+    document.getElementById('response').classList.remove('hidden');
+}
+
+function moveButton() {
+    const btn = document.getElementById('noBtn');
+    const x = Math.random() * window.innerWidth * 0.7;
+    const y = Math.random() * window.innerHeight * 0.6;
+    btn.style.position = "absolute";
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
